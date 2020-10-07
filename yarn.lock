@@ -1157,7 +1157,7 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@datorama/akita-ng-router-store@^5.1.3":
+"@datorama/akita-ng-router-store@^5.1.7":
   version "5.1.7"
   resolved "https://registry.yarnpkg.com/@datorama/akita-ng-router-store/-/akita-ng-router-store-5.1.7.tgz#065ba6d7b17873026fa4b689c8993092ec3c350d"
   integrity sha512-8j7hltB8VvVIdwMTyy03dZerA7AY/2yZ3IduJh1/dLpnoMYD3WbDVhhz7ZVwZhIF/nNTCuIBWcAUKIybIwvToA==
@@ -2030,12 +2030,12 @@ ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-akita-ng-fire@^1.5.13:
-  version "1.5.13"
-  resolved "https://registry.yarnpkg.com/akita-ng-fire/-/akita-ng-fire-1.5.13.tgz#400f71cb8cd13f21e9cd396a0fc783ce96416580"
-  integrity sha512-8JWdqg+uOVQhNsaLSq/7kTIFOo1u2mOJQemOXJPpZuGpVaLjYNKpaumQSmR8UaHrm0eUWgTsaUJc8A5NIpZSrA==
+akita-ng-fire@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/akita-ng-fire/-/akita-ng-fire-3.1.4.tgz#166b917cbbb17b7aaee951347d02698f1a54a816"
+  integrity sha512-jglfBPqIzF6UogU38HlLPmdSdMi/i5Mt6loCye4l82a92tFKsYkYqcXnzkwvx6Yt54aLeXi44TIDbAPSTqGTGQ==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.0.0"
 
 alphanum-sort@^1.0.0:
   version "1.0.2"
