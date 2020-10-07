@@ -3,9 +3,7 @@
     {
       "target": "simplesave",
       "public": "dist/simplesave",
-      "ignore": [
-        "**/.*"
-      ],
+      "ignore": ["**/.*"],
       "headers": [
         {
           "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
@@ -24,5 +22,18 @@
         }
       ]
     }
-  ]
+  ],
+  "emulators": {
+    "firestore": {
+      "port": 8082
+    },
+    "ui": {
+      "enabled": true,
+      "port": 8083
+    },
+    "functions": {
+      "port": 5001
+    }
+  }
 }
+
