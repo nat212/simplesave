@@ -5,9 +5,5 @@ import { OnlineProfileStore } from './online-profile.store';
 
 @Injectable({ providedIn: 'root' })
 export class OnlineProfileService {
-
-  constructor(private onlineProfileStore: OnlineProfileStore, private http: HttpClient) {
-  }
-
-
+  constructor(private onlineProfileStore: OnlineProfileStore, private http: HttpClient) {}
 }

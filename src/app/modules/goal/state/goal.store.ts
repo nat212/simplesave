@@ -7,9 +7,7 @@ export interface GoalState extends EntityState<Goal, string>, ActiveState<string
 @Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'goal' })
 export class GoalStore extends EntityStore<GoalState> {
-
   constructor() {
     super();
   }
-
 }

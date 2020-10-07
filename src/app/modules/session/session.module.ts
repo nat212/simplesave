@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { SessionRoutingModule } from './session-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    SessionRoutingModule
-  ]
+  imports: [CommonModule, SessionRoutingModule],
 })
-export class SessionModule { }
+export class SessionModule {}

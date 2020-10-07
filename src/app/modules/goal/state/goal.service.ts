@@ -5,9 +5,7 @@ import { GoalStore, GoalState } from './goal.store';
 @Injectable({ providedIn: 'root' })
 @CollectionConfig({ path: 'goals' })
 export class GoalService extends CollectionService<GoalState> {
-
   constructor(store: GoalStore) {
     super(store);
   }
-
 }

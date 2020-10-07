@@ -3,7 +3,5 @@ export interface Goal {
 }
 
 export function createGoal(params: Partial<Goal>) {
-  return {
-
-  } as Goal;
+  return {} as Goal;
 }

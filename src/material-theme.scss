@@ -139,7 +139,7 @@ $mat-primary: (
   darker: #29379d,
   200: #3f51b5,
   // For slide toggle,
-    contrast:
+  contrast:
     (
       main: $light-primary-text,
       lighter: $dark-primary-text,
@@ -163,7 +163,7 @@ $mat-accent: (
   darker: #ff2a64,
   200: #ff4081,
   // For slide toggle,
-    contrast:
+  contrast:
     (
       main: $light-primary-text,
       lighter: $dark-primary-text,
@@ -187,7 +187,7 @@ $mat-warn: (
   darker: #ff0000,
   200: #ff0000,
   // For slide toggle,
-    contrast:
+  contrast:
     (
       main: $light-primary-text,
       lighter: $dark-primary-text,

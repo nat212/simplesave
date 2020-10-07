@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { GoalRoutingModule } from './goal-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    GoalRoutingModule
-  ]
+  imports: [CommonModule, GoalRoutingModule],
 })
-export class GoalModule { }
+export class GoalModule {}
