@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "simple-save-2": {
+      "hosting": {
+        "simplesave": [
+          "simple-save-2"
+        ]
+      }
+    }
+  }
+}
