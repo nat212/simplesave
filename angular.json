@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "simplesave"
+  "defaultProject": "simplesave",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
