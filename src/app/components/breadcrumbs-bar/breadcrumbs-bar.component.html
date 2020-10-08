@@ -1,1 +1,13 @@
-<p>breadcrumbs-bar works!</p>
+<mat-toolbar color="accent" class="breadcrumbs-bar" *ngIf="crumbs$ | async as crumbs">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button *ngIf="crumbs.length > 1" routerLink="..">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <ng-container *ngFor="let crumb of crumbs; let last = last">
+      <span class="crumb" [routerLink]="crumb.path" [class.last]="last">{{ crumb.label }}</span>
+      <mat-icon *ngIf="!last">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </mat-icon>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>

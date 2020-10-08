@@ -1,3 +1,5 @@
+@import '~@angular/material/theming';
+
 :host {
   height: 100vh;
   width: 100vw;
@@ -9,4 +11,10 @@
 .app-contents {
   flex: 1 1 auto;
   overflow: auto;
+}
+
+.app-toolbar {
+  z-index: 3;
+  position: relative;
+  @include mat-elevation(6);
 }

@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/goals',
+    pathMatch: 'full',
+  },
+  {
     path: 'session',
     loadChildren: () => import('./modules/session/session.module').then((m) => m.SessionModule),
   },
