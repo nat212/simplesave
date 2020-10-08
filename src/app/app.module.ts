@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BreadcrumbsBarComponent } from './components/breadcrumbs-bar/breadcrumbs-bar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent, BreadcrumbsBarComponent],
@@ -18,6 +19,7 @@ import { BreadcrumbsBarComponent } from './components/breadcrumbs-bar/breadcrumb
     AkitaNgRouterStoreModule,
     BrowserAnimationsModule,
     SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],
