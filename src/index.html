@@ -6,21 +6,45 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg" href="assets/icons/simplesave-app-icon.svg" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;display=swap"
     />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
     />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="apple-touch-icon" href="assets/icons/icon-180x180.png" />
     <meta name="theme-color" content="#3f51b5" />
+    <meta name="description" content="A free, easy to use, savings application." />
   </head>
   <body class="mat-typography">
     <ss-root></ss-root>
