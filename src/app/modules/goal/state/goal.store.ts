@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EntityState, EntityStore, StoreConfig, ActiveState } from '@datorama/akita';
+import { ActiveState, EntityState, EntityStore, StoreConfig } from '@datorama/akita';
 import { Goal } from './goal.model';
 
 export interface GoalState extends EntityState<Goal, string>, ActiveState<string> {}

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { QueryEntity } from '@datorama/akita';
-import { GoalStore, GoalState } from './goal.store';
+import { GoalState, GoalStore } from './goal.store';
 
 @Injectable({ providedIn: 'root' })
 export class GoalQuery extends QueryEntity<GoalState> {
