@@ -19,6 +19,5 @@ export class BreadcrumbsBarComponent implements OnInit {
 
   public ngOnInit(): void {
     this.crumbs$ = this.routerQuery.selectData().pipe(map(({ breadcrumbs }) => breadcrumbs));
-    this.crumbs$.subscribe(console.log);
   }
 }

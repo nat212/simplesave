@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Goal } from '@modules/goal/state/goal.model';
+import { GoalQuery } from '@modules/goal/state/goal.query';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ss-goals-home',
@@ -6,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goals-home.component.scss'],
 })
 export class GoalsHomeComponent implements OnInit {
-  constructor() {}
+  public goals$: Observable<Goal[]>;
+  constructor(private goalQuery: GoalQuery) {}
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.goals$ = this.goalQuery.selectAll();
+  }
 }
