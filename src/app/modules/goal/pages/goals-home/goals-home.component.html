@@ -1,0 +1,14 @@
+<div class="container" gdRows="auto!" gdColumns="auto" gdColumns.gt-sm="1fr 2fr 1fr" gdGap="8px">
+  <ss-goal-card
+    [goal]="goal"
+    *ngFor="let goal of goals$ | async"
+    gdColumn.gt-sm="2"
+    (goalClick)="depositWithdraw(goal)"
+    (deleteClick)="deleteGoal(goal)"
+    (editClick)="editGoal(goal)"
+    (depositWithdrawClick)="depositWithdraw(goal)"
+  ></ss-goal-card>
+</div>
+<button mat-fab type="button" routerLink="add" color="accent" class="add-button" [@fabShowHide]>
+  <mat-icon>add</mat-icon>
+</button>

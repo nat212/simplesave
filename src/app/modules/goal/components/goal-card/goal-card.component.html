@@ -1,0 +1,52 @@
+<div
+  class="goal"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  fxLayoutGap="16px"
+  (click)="goalClick.emit()"
+>
+  <div class="progress-icon">
+    <mat-progress-spinner
+      class="background ss-progress-primary-light"
+      [value]="100"
+      [diameter]="75"
+    ></mat-progress-spinner>
+    <mat-progress-spinner
+      [value]="(goal.saved / goal.amount) * 100"
+      [diameter]="75"
+      color="primary"
+      class="ss-progress-bar"
+    ></mat-progress-spinner>
+    <mat-icon>flag</mat-icon>
+  </div>
+  <div
+    class="goal-details"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxLayoutGap="4px"
+    fxFlex="1 1 auto"
+  >
+    <span class="goal-name">{{ goal.name }}</span>
+    <span class="goal-amount">
+      Saved:
+      {{ goal.saved }} / {{ goal.amount }} ({{ goal.saved / goal.amount | percent }})
+    </span>
+  </div>
+  <button mat-icon-button type="button" [matMenuTriggerFor]="goalMenu" (click)="menuClick($event)">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #goalMenu>
+    <button mat-menu-item type="button" (click)="editClick.emit()">
+      <mat-icon>edit</mat-icon>
+      Edit Goal
+    </button>
+    <button mat-menu-item type="button" (click)="depositWithdrawClick.emit()">
+      <mat-icon>payments</mat-icon>
+      Withdraw/Deposit/Transfer
+    </button>
+    <button mat-menu-item type="button" (click)="deleteClick.emit()">
+      <mat-icon>delete</mat-icon>
+      Delete Goal
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,45 @@
+<form
+  class="container"
+  [formGroup]="goalForm"
+  gdRows="auto!"
+  gdColumns="auto"
+  gdColumns.gt-sm="1fr 2fr 1fr"
+  (submit)="submit()"
+>
+  <mat-card gdColumn.gt-sm="2">
+    <mat-card-header class="header">
+      <mat-card-title *ngIf="goal$ | async as goal; else newGoal">
+        Edit {{ goal.name }}
+      </mat-card-title>
+      <ng-template #newGoal>New Savings Goal</ng-template>
+      <mat-card-subtitle>Fields marked with a * are required</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content fxLayout="column" fxLayoutAlign="start stretch">
+      <mat-form-field>
+        <mat-label>Goal Name *</mat-label>
+        <input matInput type="text" name="goal-name" formControlName="name" autocomplete="off" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Amount *</mat-label>
+        <input
+          matInput
+          type="number"
+          name="goal-amount"
+          step="0.01"
+          formControlName="amount"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  <button
+    mat-fab
+    color="primary"
+    type="submit"
+    [disabled]="goalForm.invalid"
+    class="submit-button"
+    [@fabShowHide]
+  >
+    <mat-icon>check</mat-icon>
+  </button>
+</form>

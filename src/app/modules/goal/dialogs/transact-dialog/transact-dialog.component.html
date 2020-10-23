@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Transact on {{ data.goal.name }}</h2>
+<form mat-dialog-content [formGroup]="transactForm">
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="8px">
+    <mat-button-toggle-group formControlName="type">
+      <mat-button-toggle value="deposit">Deposit</mat-button-toggle>
+      <mat-button-toggle value="withdraw">Withdraw</mat-button-toggle>
+      <mat-button-toggle value="transfer">Transfer</mat-button-toggle>
+    </mat-button-toggle-group>
+    <mat-form-field>
+      <mat-label>Amount *</mat-label>
+      <input
+        matInput
+        type="number"
+        step="0.01"
+        formControlName="amount"
+        name="{{ data.goal.name }}-transact-amount"
+      />
+      <mat-error>Please enter an amount</mat-error>
+    </mat-form-field>
+    <mat-form-field *ngIf="transactForm.value.type === 'transfer'">
+      <mat-label>Transfer to *</mat-label>
+      <mat-select formControlName="toGoal">
+        <mat-option *ngFor="let goal of goals$ | async" [value]="goal">
+          {{ goal.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error>Please select a goal</mat-error>
+    </mat-form-field>
+  </div>
+</form>
+<div mat-dialog-actions align="end">
+  <button mat-button type="button" mat-dialog-close>Cancel</button>
+  <button
+    mat-button
+    color="primary"
+    type="button"
+    [mat-dialog-close]="transactForm.value"
+    [disabled]="transactForm.invalid"
+  >
+    Okay
+  </button>
+</div>
