@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Goal } from '@modules/goal/state/goal.model';
 
 @Component({
@@ -12,6 +12,7 @@ export class GoalCardComponent {
   @Output() public editClick = new EventEmitter<void>();
   @Output() public depositWithdrawClick = new EventEmitter<void>();
   @Output() public goalClick = new EventEmitter<void>();
+  @Output() public achievedClick = new EventEmitter<void>();
 
   public menuClick(event: MouseEvent): void {
     event.cancelBubble = true;

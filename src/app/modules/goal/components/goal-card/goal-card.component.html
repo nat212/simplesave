@@ -17,7 +17,7 @@
       color="primary"
       class="ss-progress-bar"
     ></mat-progress-spinner>
-    <mat-icon>flag</mat-icon>
+    <mat-icon>{{ goal.achieved ? 'check' : 'flag' }}</mat-icon>
   </div>
   <div
     class="goal-details"
@@ -43,6 +43,16 @@
     <button mat-menu-item type="button" (click)="depositWithdrawClick.emit()">
       <mat-icon>payments</mat-icon>
       Withdraw/Deposit/Transfer
+    </button>
+    <button mat-menu-item type="button" (click)="achievedClick.emit()">
+      <ng-container *ngIf="!goal.achieved; else achieved">
+        <mat-icon>check</mat-icon>
+        Mark Achieved
+      </ng-container>
+      <ng-template #achieved>
+        <mat-icon>close</mat-icon>
+        Mark Unachieved
+      </ng-template>
     </button>
     <button mat-menu-item type="button" (click)="deleteClick.emit()">
       <mat-icon>delete</mat-icon>

@@ -1,14 +1,39 @@
-<div class="container" gdRows="auto!" gdColumns="auto" gdColumns.gt-sm="1fr 2fr 1fr" gdGap="8px">
+<form
+  class="container"
+  gdRows="auto!"
+  gdColumns="auto"
+  gdColumns.gt-sm="1fr 2fr 1fr"
+  gdGap="8px"
+  [formGroup]="filterForm"
+>
+  <button
+    mat-mini-fab
+    color="primary"
+    type="button"
+    class="filter-button"
+    [matMenuTriggerFor]="filterMenu"
+  >
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <mat-menu #filterMenu="matMenu">
+    <button mat-menu-item>Test</button>
+  </mat-menu>
+  <mat-form-field gdColumn.gt-sm="2">
+    <mat-label>Search</mat-label>
+    <input matInput type="text" formControlName="search" name="goal-search" autocomplete="off" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
   <ss-goal-card
     [goal]="goal"
-    *ngFor="let goal of goals$ | async"
+    *ngFor="let goal of filteredGoals$ | async"
     gdColumn.gt-sm="2"
     (goalClick)="depositWithdraw(goal)"
     (deleteClick)="deleteGoal(goal)"
     (editClick)="editGoal(goal)"
     (depositWithdrawClick)="depositWithdraw(goal)"
+    (achievedClick)="markAchieved(goal)"
   ></ss-goal-card>
-</div>
+</form>
 <button mat-fab type="button" routerLink="add" color="accent" class="add-button" [@fabShowHide]>
   <mat-icon>add</mat-icon>
 </button>

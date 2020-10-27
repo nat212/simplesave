@@ -30,6 +30,7 @@
     "@ngneat/spectator": "^5.13.4",
     "akita-ng-fire": "^3.1.4",
     "firebase": "^7.13.1",
+    "fuse.js": "^6.4.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "uuid": "^8.3.1",

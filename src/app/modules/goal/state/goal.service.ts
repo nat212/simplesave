@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DocumentChangeAction } from '@angular/fire/firestore';
 import { AuthService } from '@modules/session/state/auth.service';
 import { CollectionConfig } from 'akita-ng-fire';
-import { concat, from, Observable, of, zip } from 'rxjs';
+import { from, Observable, of, zip } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import * as uuid from 'uuid';
 import { createGoal, Goal } from './goal.model';

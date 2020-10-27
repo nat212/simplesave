@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { GoalCardComponent } from './components/goal-card/goal-card.component';
 import { TransactDialogComponent } from './dialogs/transact-dialog/transact-dialog.component';
@@ -35,6 +36,7 @@ import { GoalsHomeComponent } from './pages/goals-home/goals-home.component';
     MatButtonToggleModule,
     MatDialogModule,
     MatSelectModule,
+    MatRadioModule,
   ],
   entryComponents: [TransactDialogComponent],
 })
